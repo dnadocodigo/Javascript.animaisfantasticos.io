@@ -1,0 +1,25 @@
+.js [data-anime = 'accordion'] dt::after{
+  content: '⮧';
+  margin-left: .625rem
+}
+.js [data-anime = 'accordion'] dt.ativo::after{
+  content: '⮥';
+}
+.js [data-anime = 'accordion'] dd{
+  display: none;
+}
+.js [data-anime = 'accordion'] dd.ativo{
+  display: block;
+  animation: slideDown 5.s forwards;;
+}
+
+@keyframes slideDown{
+  from{
+    opacity: 0;
+    max-height: 0;
+  }
+  to{
+    max-width: 12.5rem;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,22 @@
+.js [data-dropdown]{
+  position: relative;
+}
+.js [data-dropdown] .dropdown-menu{
+  display: none;
+}
+.js [data-dropdown]:hover .dropdown-menu,
+[data-dropdown].ativo .dropdown-menu{
+  display: block;
+  animation: show-up 3s forwards;
+}
+
+@keyframes show-up {
+  from{
+    opacity: 0;
+    transform: translate3d(0, 1.875rem, 0);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

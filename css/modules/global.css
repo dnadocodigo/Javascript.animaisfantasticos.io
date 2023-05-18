@@ -1,0 +1,26 @@
+body, h1, h2, p, ul, li, dt, dd, dl{
+  margin: 0;
+  padding: 0;
+}
+img{
+  display: block;
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+}
+html{
+  font-size: 1rem;
+}
+html.zoom{
+  font-size: 150%;
+}
+body{
+  background: #faf6ed;
+  color: #222;
+  -webKit-font-smoothing: antialiased;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 8.125rem minmax(18.75rem, 50rem) 1fr;
+}

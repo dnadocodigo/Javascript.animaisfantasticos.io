@@ -1,0 +1,62 @@
+.modal-container{
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container.ativo{
+  display: flex;
+}
+.modal{
+  background: #fff;
+  min-width: 18.25rem;
+  padding: 2.5rem;
+  border: .625rem solid #fb5;
+  box-shadow: 0 0 0 .625rem #fff;
+  position: relative;
+}
+.fechar{
+  width: 3.125rem;
+  height:3.125rem;
+  border: .25rem solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 .25rem .25rem 0 rgba(0, 0, 0, .3);
+  background: #e54;
+  top: -1.825rem;
+  right: -1.875rem;
+  position: absolute;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+.modal label{
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 900;
+  margin: 1rem 0 .5rem 0;
+}
+.modal input{
+  width: 100%;
+  padding: .7rem .5rem;
+  box-sizing: border-box;
+  border-radius: .25rem;
+}
+.modal button[type="submit"]{
+  display: block;
+  background: #e54;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  padding: .7rem 2rem;
+  border: none;
+  border-radius: .25rem;
+  color: #fff;
+  margin-top: 1rem;
+}
