@@ -1,20 +1,33 @@
-const initSoftScroll = () => {
-  const linksInternos = document.querySelectorAll(
-    '[data-menu="soft"] a[href^="#"]',
-  );
+class SoftScroll {
+  constructor(links, options) {
+    this.linksInternos = document.querySelectorAll(links);
+    if (options === undefined) {
+      this.options = { behavior: "smooth", block: "start" };
+    } else {
+      this.options = options;
+    }
+    this.softScrollToSection = this.softScrollToSection.bind(this);
+  }
 
-  const softScrollToSection = (event) => {
+  softScrollToSection(event) {
     event.preventDefault();
     const selectHref = event.currentTarget.getAttribute("href");
     const selectSection = document.querySelector(selectHref);
 
-    selectSection.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+    selectSection.scrollIntoView(this.options);
+  }
+
+  addLinksEvent() {
+    this.linksInternos.forEach((link) => {
+      link.addEventListener("click", this.softScrollToSection);
     });
-  };
-  linksInternos.forEach((link) => {
-    link.addEventListener("click", softScrollToSection);
-  });
-};
-export default initSoftScroll;
+  }
+
+  init() {
+    if (this.linksInternos.length) {
+      this.addLinksEvent();
+    }
+    return this;
+  }
+}
+export default SoftScroll;
