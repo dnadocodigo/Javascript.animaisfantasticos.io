@@ -1,7 +1,5 @@
 import initActiveTabs from "./modules/tabs_data-anime.js";
 import initAccordionList from "./modules/accordion_data-anime.js";
-// import SoftScroll from "./modules/soft_scroll_data-anime.js";
-import initSoftScrollAnimation from "./modules/soft_scroll_animation_data-anime.js";
 import initModal from "./modules/modal_data-modal.js";
 import initTooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/menu_dropdown.js";
@@ -12,13 +10,14 @@ import initNumberFetchAnimals from "./modules/number_animals_fetch.js";
 import initFetchBitcoin from "./modules/bitcon_fetch.js";
 import SoftScroll from "./modules/soft_scroll_data-anime.js";
 
+import initSoftScrollAnimation from "./modules/soft_scroll_animation_data-anime.js";
+
 const softScroll = new SoftScroll('[data-menu="soft"] a[href^="#"]');
 softScroll.init();
 
 initActiveTabs();
 initAccordionList();
 
-initSoftScrollAnimation();
 initModal();
 initTooltip();
 initDropdownMenu();
@@ -28,3 +27,5 @@ initAnimeNumber();
 initFuncionamento();
 initNumberFetchAnimals();
 initFetchBitcoin();
+
+initSoftScrollAnimation();
