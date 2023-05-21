@@ -12,8 +12,8 @@ import initNumberFetchAnimals from "./modules/number_animals_fetch.js";
 import initFetchBitcoin from "./modules/bitcon_fetch.js";
 import SoftScroll from "./modules/soft_scroll_data-anime.js";
 
-const softScrool = new SoftScroll('[data-menu="soft"] a[href^="#"]');
-softScrool.init();
+const softScroll = new SoftScroll('[data-menu="soft"] a[href^="#"]');
+softScroll.init();
 
 initActiveTabs();
 initAccordionList();
