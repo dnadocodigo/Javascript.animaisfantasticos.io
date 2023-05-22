@@ -1,5 +1,5 @@
 import initActiveTabs from "./modules/tabs_data-anime.js";
-import initAccordionList from "./modules/accordion_data-anime.js";
+import Accordion from "./modules/accordion_data-anime.js";
 import initModal from "./modules/modal_data-modal.js";
 import initTooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/menu_dropdown.js";
@@ -15,9 +15,10 @@ import initSoftScrollAnimation from "./modules/soft_scroll_animation_data-anime.
 const softScroll = new SoftScroll('[data-menu="soft"] a[href^="#"]');
 softScroll.init();
 
-initActiveTabs();
-initAccordionList();
+const accordion = new Accordion('[data-anime="accordion"] dt');
+accordion.init();
 
+initActiveTabs();
 initModal();
 initTooltip();
 initDropdownMenu();
