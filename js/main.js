@@ -1,6 +1,6 @@
 import TabNav from "./modules/tabs_data-anime.js";
 import Accordion from "./modules/accordion_data-anime.js";
-// import Modal from "./modules/modal_data-modal.js";
+import Modal from "./modules/modal_data-modal.js";
 import initTooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/menu_dropdown.js";
 import initMenuMobile from "./modules/menu_moblie.js";
@@ -24,12 +24,12 @@ const tabNav = new TabNav(
 );
 tabNav.init();
 
-// const modal = Modal(
-//   '[data-modal="abtir"]',
-//   '[data-modal="fechar"]',
-//   '[data-modal="container"]',
-// );
-// modal.init();
+const modal = Modal(
+  '[data-modal="abtir"]',
+  '[data-modal="fechar"]',
+  '[data-modal="container"]',
+);
+modal.init();
 
 initTooltip();
 initDropdownMenu();
