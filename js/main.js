@@ -1,7 +1,7 @@
 import TabNav from "./modules/tabs_data-anime.js";
 import Accordion from "./modules/accordion_data-anime.js";
 import Modal from "./modules/modal_data-modal.js";
-import initTooltip from "./modules/tooltip.js";
+import Tooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/menu_dropdown.js";
 import initMenuMobile from "./modules/menu_moblie.js";
 import initAnimeNumber from "./modules/anime_number.js";
@@ -31,7 +31,9 @@ const modal = new Modal(
 );
 modal.init();
 
-initTooltip();
+const tooltip = new Tooltip("[data-tooltip]");
+tooltip.init();
+
 initDropdownMenu();
 initMenuMobile();
 initDropdownMenu();
