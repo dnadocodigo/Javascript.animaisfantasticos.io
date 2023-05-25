@@ -1,6 +1,6 @@
-import initAnimeNumber from "./anime_number.js";
+import AnimeNumber from "./anime_number.js";
 
-const initNumberFetchAnimals = () => {
+export default function initNumberFetchAnimals() {
   function createAnimalsElement(animal) {
     const createDiv = document.createElement("div");
     createDiv.classList.add("numero-animal");
@@ -16,11 +16,12 @@ const initNumberFetchAnimals = () => {
         const divAnimal = createAnimalsElement(animal);
         numberGrid.appendChild(divAnimal);
       });
-      initAnimeNumber();
+      const animeNumero = new AnimeNumber("[data-numero]", ".numero", "ativo");
+      animeNumero.init();
     } catch (erro) {
       console.log(erro);
     }
   }
   fetchAnimals("./js/jsons/animalsApi.json");
 };
-export default initNumberFetchAnimals;
+
