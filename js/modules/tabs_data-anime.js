@@ -2,7 +2,7 @@ class Tabnav {
   constructor(menu, content) {
     this.tabMenu = document.querySelectorAll(menu);
     this.tabContent = document.querySelectorAll(content);
-    this.activeClass = "ativo";
+    this.activeClass = "active";
   }
 
   // ativa o tab de acordo com o index da mesma
