@@ -11,17 +11,16 @@ export default function initNumberFetchAnimals() {
     try {
       const animalsResponses = await fetch(url);
       const animalsJSON = await animalsResponses.json();
-      const numberGrid = document.querySelector(".numeros-grid");
+      const numberGrid = document.querySelector(".numbers-grid");
       animalsJSON.forEach((animal) => {
         const divAnimal = createAnimalsElement(animal);
         numberGrid.appendChild(divAnimal);
       });
-      const animeNumero = new AnimeNumber("[data-numero]", ".numero", "ativo");
+      const animeNumero = new AnimeNumber("[data-number]", ".numero", "active");
       animeNumero.init();
     } catch (erro) {
       console.log(erro);
     }
   }
   fetchAnimals("./js/jsons/animalsApi.json");
-};
-
+}

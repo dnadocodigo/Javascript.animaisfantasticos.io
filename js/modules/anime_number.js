@@ -1,4 +1,4 @@
-export default class AnimeNumeros {
+export default class AnimeNumbers {
   constructor(numeros, observerTarget, observerClass) {
     this.numeros = document.querySelectorAll(numeros);
     this.observerTarget = document.querySelector(observerTarget);
