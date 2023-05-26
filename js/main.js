@@ -1,3 +1,4 @@
+import SoftScroll from "./modules/soft_scroll_data-anime.js";
 import TabNav from "./modules/tabs_data-anime.js";
 import Accordion from "./modules/accordion_data-anime.js";
 import Modal from "./modules/modal_data-modal.js";
@@ -7,7 +8,6 @@ import initMenuMobile from "./modules/menu_moblie.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import initNumberFetchAnimals from "./modules/number_animals_fetch.js";
 import initFetchBitcoin from "./modules/bitcon_fetch.js";
-import SoftScroll from "./modules/soft_scroll_data-anime.js";
 
 import initSoftScrollAnimation from "./modules/soft_scroll_animation_data-anime.js";
 
