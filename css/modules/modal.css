@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
 }
-.modal-container.ativo{
+.modal-container.active{
   display: flex;
 }
 .modal{
@@ -21,7 +21,7 @@
   box-shadow: 0 0 0 .625rem #fff;
   position: relative;
 }
-.fechar{
+.close{
   width: 3.125rem;
   height:3.125rem;
   border: .25rem solid #fff;
