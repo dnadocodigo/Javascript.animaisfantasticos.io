@@ -1,20 +1,19 @@
 const initFuncionamento = () => {
-  const funcionanmento = document.querySelector("[data-semana]");
-  const diasSemana = funcionanmento.dataset.semana.split(",").map(Number);
-  const horarioFuncionamento = funcionanmento.dataset.horario
-    .split(",")
-    .map(Number);
-  const dataAtual = new Date();
+  const operation = document.querySelector("[data-week]");
+  console.log(operation);
+  const daysOfTheWeek = operation.dataset.week.split(",").map(Number);
+  const openingHours = operation.dataset.schedule.split(",").map(Number);
+  const currentDate = new Date();
 
-  const diaAtusl = dataAtual.getDay();
-  const horaAtual = dataAtual.getHours();
+  const currentDay = currentDate.getDay();
+  const currentTime = currentDate.getHours();
 
-  const estaAbeto = diasSemana.indexOf(diaAtusl) !== -1;
-  const horarioAbertura =
-    horaAtual >= horarioFuncionamento[0] && horaAtual < horarioFuncionamento[1];
+  const isOpen = daysOfTheWeek.indexOf(currentDay) !== -1;
+  const openingTime =
+    currentTime >= openingHours[0] && currentTime < openingHours[1];
 
-  if (estaAbeto && horarioAbertura) {
-    funcionanmento.classList.add("aberto");
+  if (isOpen && openingTime) {
+    operation.classList.add("open");
   }
 };
 export default initFuncionamento;
