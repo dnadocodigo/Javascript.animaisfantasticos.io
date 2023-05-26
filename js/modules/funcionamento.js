@@ -12,7 +12,7 @@ const initFuncionamento = () => {
   const estaAbeto = diasSemana.indexOf(diaAtusl) !== -1;
   const horarioAbertura =
     horaAtual >= horarioFuncionamento[0] && horaAtual < horarioFuncionamento[1];
- 
+
   if (estaAbeto && horarioAbertura) {
     funcionanmento.classList.add("aberto");
   }
