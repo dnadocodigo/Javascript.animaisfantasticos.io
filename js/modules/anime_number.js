@@ -1,6 +1,6 @@
 export default class AnimeNumbers {
-  constructor(numeros, observerTarget, observerClass) {
-    this.numeros = document.querySelectorAll(numeros);
+  constructor(numbers, observerTarget, observerClass) {
+    this.numbers = document.querySelectorAll(numbers);
     this.observerTarget = document.querySelector(observerTarget);
     this.observerClass = observerClass;
 
@@ -10,16 +10,16 @@ export default class AnimeNumbers {
 
   // Recebe um elemento do dom, com número em seu texto
   // incrementa a partir de 0 até o número final
-  static incrementarNumero(numero) {
-    const total = +numero.innerText;
-    const incremento = Math.floor(total / 100);
+  static incrementNumbers(number) {
+    const total = +number.innerText;
+    const increment = Math.floor(total / 100);
 
     let start = 0;
     const timer = setInterval(() => {
-      start += incremento;
-      numero.innerText = start;
+      start += increment;
+      number.innerText = start;
       if (start > total) {
-        numero.innerText = total;
+        number.innerText = total;
         clearInterval(timer);
       }
     }, 25 * Math.random());
@@ -27,17 +27,15 @@ export default class AnimeNumbers {
 
   // Ativa incrementar número para cada
   // número selecionado do dom
-  animaNumeros() {
-    this.numeros.forEach((numero) =>
-      this.constructor.incrementarNumero(numero),
-    );
+  animeNumber() {
+    this.numbers.forEach((number) => this.constructor.incrementNumbers(number));
   }
 
   // Função que ocorre quando a mutações ocorrer
   handleMutation(mutation) {
     if (mutation[0].target.classList.contains(this.observerClass)) {
       this.observer.disconnect();
-      this.animaNumeros();
+      this.animeNumber();
     }
   }
 
@@ -47,7 +45,7 @@ export default class AnimeNumbers {
   }
 
   init() {
-    if (this.numeros.length && this.observerTarget) {
+    if (this.numbers.length && this.observerTarget) {
       this.addMutationObserver();
     }
     return this;

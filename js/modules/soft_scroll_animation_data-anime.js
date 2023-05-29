@@ -9,9 +9,9 @@ const initSoftScrollAnimation = () => {
       const isSectionVisible = sectionTop - halfScreen < 0;
 
       if (isSectionVisible) {
-        section.classList.add("ativo");
-      } else if (section.classList.contains("ativo")) {
-        section.classList.remove("ativo");
+        section.classList.add("active");
+      } else if (section.classList.contains("active")) {
+        section.classList.remove("active");
       }
     });
   };
