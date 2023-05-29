@@ -6,7 +6,7 @@ import Tooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/menu_dropdown.js";
 import initMenuMobile from "./modules/menu_moblie.js";
 import initFuncionamento from "./modules/funcionamento.js";
-import initNumberFetchAnimals from "./modules/number_animals_fetch.js";
+import fetchAnimal from "./modules/number_animals_fetch.js";
 import initFetchBitcoin from "./modules/bitcon_fetch.js";
 
 import initSoftScrollAnimation from "./modules/soft_scroll_animation_data-anime.js";
@@ -37,7 +37,10 @@ initDropdownMenu();
 initMenuMobile();
 initDropdownMenu();
 initFuncionamento();
-initNumberFetchAnimals();
+
 initFetchBitcoin();
 
+fetchAnimal("./js/jsons/animalsApi.json", ".numbers-grid");
+
 initSoftScrollAnimation();
+
