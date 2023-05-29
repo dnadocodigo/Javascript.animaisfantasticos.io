@@ -6,9 +6,9 @@ class ScrollAnime {
     this.checkDistance = this.checkDistance.bind(this);
   }
 
-  // pega a didtâncoa de cada item
+  // pega a distância de cada item
   // em relação ao topo do site.
-  getDistannce() {
+  getDistance() {
     this.distance = [...this.sections].map((section) => {
       const offset = section.offsettop;
       return {
@@ -18,7 +18,7 @@ class ScrollAnime {
     });
   }
 
-  // verifica a distância em cada objetos 
+  // verifica a distância de cada objeto
   // em relação ao scroll do site.
   checkDistance() {
     this.distance.forEach((item) => {
@@ -32,7 +32,7 @@ class ScrollAnime {
 
   init() {
     if(this.sections.length){
-      this.getDistannce();
+      this.getDistance();
       this.checkDistance();
       window.addEventListener("scroll", this.checkDistance);
     }
