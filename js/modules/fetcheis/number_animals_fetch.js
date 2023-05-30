@@ -1,4 +1,4 @@
-import AnimeNumber from "./anime_number.js";
+import AnimeNumber from "../animations/anime_number.js";
 
 export default function fetchAnimal(url, target) {
   // cria a div contendo informaçõs

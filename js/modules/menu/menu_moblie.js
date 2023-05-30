@@ -1,4 +1,4 @@
-import outsideEvents from "./outside_events.js";
+import outsideEvents from "../helpers/outside_events.js";
 
 const initMenuMobile = () => {
   const menuButton = document.querySelector('[data-menu="button"]');

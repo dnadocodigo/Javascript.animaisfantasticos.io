@@ -1,4 +1,4 @@
-const initFuncionamento = () => {
+const opening = () => {
   const operation = document.querySelector("[data-week]");
   console.log(operation);
   const daysOfTheWeek = operation.dataset.week.split(",").map(Number);
@@ -16,4 +16,4 @@ const initFuncionamento = () => {
     operation.classList.add("open");
   }
 };
-export default initFuncionamento;
+export default opening;

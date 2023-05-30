@@ -18,20 +18,6 @@ class ScrollAnime {
     });
   }
 
-  animatedScroll() {
-    this.scrollSection.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top;
-
-      const isSectionVisible = sectionTop - this.halfScreen < 0;
-
-      if (isSectionVisible) {
-        section.classList.add("active");
-      } else if (section.classList.contains("active")) {
-        section.classList.remove("active");
-      }
-    });
-  }
-
   // Verifica a distância em cada objeto
   // em relação ao scroll do site
   checkDistance() {
