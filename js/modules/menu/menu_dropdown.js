@@ -1,4 +1,4 @@
-import outsideEvents from "./outside_events.js";
+import outsideEvents from "../helpers/outside_events.js";
 
 const initDropdownMenu = () => {
   const dropdwnMenus = document.querySelectorAll("[data-dropdown]");

@@ -1,15 +1,15 @@
-import SoftScroll from "./modules/soft_scroll_data-anime.js";
-import TabNav from "./modules/tabs_data-anime.js";
-import Accordion from "./modules/accordion_data-anime.js";
-import Modal from "./modules/modal_data-modal.js";
-import Tooltip from "./modules/tooltip.js";
-import initDropdownMenu from "./modules/menu_dropdown.js";
-import initMenuMobile from "./modules/menu_moblie.js";
-import initFuncionamento from "./modules/funcionamento.js";
-import fetchAnimal from "./modules/number_animals_fetch.js";
-import fetchBitcoin from "./modules/bitcon_fetch.js";
+import SoftScroll from "./modules/animations/soft_scroll_data-anime.js";
+import TabNav from "./modules/animations/tabs_data-anime.js";
+import Accordion from "./modules/animations/accordion_data-anime.js";
+import Modal from "./modules/modals/modal_data-modal.js";
+import Tooltip from "./modules/tooltips/tooltip.js";
+import initDropdownMenu from "./modules/menu/menu_dropdown.js";
+import initMenuMobile from "./modules/menu/menu_moblie.js";
+import opening from "./modules/opening.js";
+import fetchAnimal from "./modules/fetcheis/number_animals_fetch.js";
+import fetchBitcoin from "./modules/fetcheis/bitcon_fetch.js";
 
-import ScrollAnime from "./modules/scroll_anime_data-anime.js";
+import ScrollAnime from "./modules/animations/scroll_anime_data-anime.js";
 
 const softScroll = new SoftScroll('[data-menu="soft"] a[href^="#"]');
 softScroll.init();
@@ -39,7 +39,7 @@ scrollAnime.init();
 initDropdownMenu();
 initMenuMobile();
 initDropdownMenu();
-initFuncionamento();
+opening();
 
 fetchAnimal("./js/jsons/animalsApi.json", ".numbers-grid");
 fetchBitcoin("https://blockchain.info/ticker", ".btc-price");
