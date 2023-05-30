@@ -31,12 +31,15 @@ class ScrollAnime {
   }
 
   init() {
-    this.getDistance();
-    this.checkDistance();
-    window.addEventListener("scroll", this.checkDistance);
+    if (this.sections.length) {
+      this.getDistance();
+      this.checkDistance();
+      window.addEventListener("scroll", this.checkDistance);
+    }
+    return this;
   }
 
-  // Remove o event de scroll
+  // remove o evento de scroll
   stop() {
     window.removeEventListener("scroll", this.checkDistance);
   }
