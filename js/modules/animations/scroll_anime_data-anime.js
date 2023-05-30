@@ -1,9 +1,11 @@
+import debounce from "../helpers/debounce";
+
 class ScrollAnime {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.halfScreen = window.innerHeight * 0.6;
 
-    this.checkDistance = this.checkDistance.bind(this);
+    this.checkDistance = debounce(this.checkDistance.bind(this), 20);
   }
 
   // Pega a distância de cada item em relação
