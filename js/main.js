@@ -33,7 +33,6 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-
 const scrollAnime = new ScrollAnime('[data-anime="scroll"]');
 scrollAnime.init();
 
@@ -42,8 +41,5 @@ initMenuMobile();
 initDropdownMenu();
 initFuncionamento();
 
-
 fetchAnimal("./js/jsons/animalsApi.json", ".numbers-grid");
 fetchBitcoin("https://blockchain.info/ticker", ".btc-price");
-
-
