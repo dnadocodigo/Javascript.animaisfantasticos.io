@@ -30,7 +30,7 @@
     display: inline-block;
     transition: transform .3s;
   }
-  .js [data-menu='button'].ativo::before{
+  .js [data-menu='button'].active::before{
     transform: rotate(90deg)
   }
   .js [data-menu="list"]{
@@ -43,7 +43,7 @@
     padding: 1.875rem 0 .625rem 0;
     box-shadow: .125rem .125rem .125rem 0 rgba(0, 0, 0, .2);
   }
-  .js [data-menu="list"].ativo{
+  .js [data-menu="list"].active{
     display: block;
     animation: show-right .3s forwards;
   }
