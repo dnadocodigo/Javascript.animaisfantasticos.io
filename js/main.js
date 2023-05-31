@@ -3,7 +3,7 @@ import TabNav from "./modules/animations/tabs_data-anime.js";
 import Accordion from "./modules/animations/accordion_data-anime.js";
 import Modal from "./modules/modals/modal_data-modal.js";
 import Tooltip from "./modules/tooltips/tooltip.js";
-import initDropdownMenu from "./modules/menu/menu_dropdown.js";
+import DropdownMenu from "./modules/menu/menu_dropdown.js";
 import initMenuMobile from "./modules/menu/menu_moblie.js";
 import opening from "./modules/opening.js";
 import fetchAnimal from "./modules/fetcheis/number_animals_fetch.js";
@@ -36,9 +36,11 @@ tooltip.init();
 const scrollAnime = new ScrollAnime('[data-anime="scroll"]');
 scrollAnime.init();
 
-initDropdownMenu();
+const dropdownMenu = new DropdownMenu("[data-dropdown]");
+dropdownMenu.init();
+
 initMenuMobile();
-initDropdownMenu();
+
 opening();
 
 fetchAnimal("./js/jsons/animalsApi.json", ".numbers-grid");
