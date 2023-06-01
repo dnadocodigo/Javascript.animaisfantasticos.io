@@ -5,7 +5,7 @@ import Modal from "./modules/modals/modal_data-modal.js";
 import Tooltip from "./modules/tooltips/tooltip.js";
 import DropdownMenu from "./modules/menu/menu_dropdown.js";
 import initMenuMobile from "./modules/menu/menu_moblie.js";
-import opening from "./modules/operations/opening.js";
+import Opening from "./modules/operations/opening.js";
 import fetchAnimal from "./modules/fetcheis/number_animals_fetch.js";
 import fetchBitcoin from "./modules/fetcheis/bitcon_fetch.js";
 
@@ -41,7 +41,8 @@ dropdownMenu.init();
 
 initMenuMobile();
 
-opening();
+const opening = new Opening("[data-week]", "open");
+opening.init();
 
 fetchAnimal("./js/jsons/animalsApi.json", ".numbers-grid");
 fetchBitcoin("https://blockchain.info/ticker", ".btc-price");
