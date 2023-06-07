@@ -8,8 +8,8 @@ import initMenuMobile from "./modules/menu/menu_moblie.js";
 import Opening from "./modules/operations/opening.js";
 import fetchAnimal from "./modules/fetcheis/number_animals_fetch.js";
 import fetchBitcoin from "./modules/fetcheis/bitcon_fetch.js";
-
 import ScrollAnime from "./modules/animations/scroll_anime_data-anime.js";
+import SlideNav from "./modules/slides/slide.js";
 
 const softScroll = new SoftScroll('[data-menu="soft"] a[href^="#"]');
 softScroll.init();
@@ -46,3 +46,7 @@ opening.init();
 
 fetchAnimal("./js/jsons/animalsApi.json", ".numbers-grid");
 fetchBitcoin("https://blockchain.info/ticker", ".btc-price");
+
+const slide = new SlideNav(".slide", ".slide-wrapper");
+slide.init();
+slide.addControl(".custom-control");
