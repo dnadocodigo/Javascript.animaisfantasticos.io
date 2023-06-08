@@ -9,7 +9,7 @@ import Opening from "./modules/operations/opening.js";
 import fetchAnimal from "./modules/fetcheis/number_animals_fetch.js";
 import fetchBitcoin from "./modules/fetcheis/bitcon_fetch.js";
 import ScrollAnime from "./modules/animations/scroll_anime_data-anime.js";
-import SlideNav from "./modules/slides/slide.js";
+import SlideNav from "./modules/slides/slidenav.js";
 
 const softScroll = new SoftScroll('[data-menu="soft"] a[href^="#"]');
 softScroll.init();
