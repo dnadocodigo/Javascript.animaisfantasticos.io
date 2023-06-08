@@ -4,7 +4,7 @@ import Accordion from "./modules/animations/accordion_data-anime.js";
 import Modal from "./modules/modals/modal_data-modal.js";
 import Tooltip from "./modules/tooltips/tooltip.js";
 import DropdownMenu from "./modules/menu/menu_dropdown.js";
-import initMenuMobile from "./modules/menu/menu_moblie.js";
+import MenuMobile from "./modules/menu/menu_moblie.js";
 import Opening from "./modules/operations/opening.js";
 import fetchAnimal from "./modules/fetcheis/number_animals_fetch.js";
 import fetchBitcoin from "./modules/fetcheis/bitcon_fetch.js";
@@ -39,7 +39,8 @@ scrollAnime.init();
 const dropdownMenu = new DropdownMenu("[data-dropdown]");
 dropdownMenu.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
 
 const opening = new Opening("[data-week]", "open");
 opening.init();
