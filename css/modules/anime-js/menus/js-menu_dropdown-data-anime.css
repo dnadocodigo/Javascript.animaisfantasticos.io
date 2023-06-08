@@ -9,7 +9,12 @@
   display: block;
   animation: show-up 3s forwards;
 }
-
+@media (max-width: 43.75rem){
+  .js [data-dropdown] .dropdown-menu{
+    display: block;
+    animation: show-up 3s forwards;
+  }
+}
 @keyframes show-up {
   from{
     opacity: 0;
@@ -20,3 +25,4 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
